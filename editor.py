@@ -10,7 +10,7 @@ def open_file():
     with open(filepath, "r") as input_file:
         text = input_file.read()
         txt_edit.insert(tk.END, text)
-    window.title(f"WEpad Text Editor - {filepath}")
+    window.title(f"Text Editor - {filepath}")
 
 def save_file():
     filepath = asksaveasfilename(defaultextension="txt", filetypes = [("Text Files", "*.txt"), ("Java Files", "*.java"), ("Python Files", "*.py"),
@@ -22,10 +22,10 @@ def save_file():
     with open(filepath, "w") as output_file:
         text = txt_edit.get(1.0, tk.END)
         output_file.write(text)
-    window.title(f"WEpad Text Editor - {filepath}")
+    window.title(f"Text Editor - {filepath}")
 
 def help():
-    messagebox.showinfo("WEpad Text Editor - Help", " Creator: Vinayak\n Date: 01 June, 2020\n Version: 1.0\n Contact: kunwarvinayak123@outlook.com\n Language: English\n License: \n Publisher: Vinayak")
+    messagebox.showinfo("Text Editor - Help", " Creator: Vinayak\n Date: 01 June, 2020\n Version: 1.0\n Contact: kunwarvinayak123@outlook.com\n Language: English\n License: \n Publisher: Vinayak")
 
 def new_file():
     messagebox.showinfo( "New File", "Don't forget to save current\nfile before opening new file.")
@@ -95,3 +95,4 @@ fr_buttons.grid(row=0, column=0, sticky="ns")
 txt_edit.grid(row=0, column=1, sticky="nsew")
 
 window.mainloop()
+
